@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mid Century Modern Arches</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Nunito' rel=
+  'stylesheet'>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src=
+  "https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="nav-container">
+    <div class="wrapper">
+      <nav>
+        <h1 class="tool-name">Mid Century Modern Arches</h1>
+      </nav>
+    </div>
+  </div>
+  <!-- End of Navigation bar -->
+  <!-- The Tool's UI -->
+  <div class="tool-container">
+    <div class="column" id="parameters-container">
+    </div>
+    <div class="column" id="canvas-container">
+      <ul>
+        <li class="canvas-list">
+          <div id="canvas-element">
+          </div>
+        </li>
+        <li><button onclick=
+        "download_image('a4', 'mallorca-ikat.png')">DOWNLOAD</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end of the Tool's UI -->
+</body>
+</html>

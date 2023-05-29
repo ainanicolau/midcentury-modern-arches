@@ -1,0 +1,267 @@
+@font-face {
+   font-family: nunitoLight;
+   src: url(resources/nunito/Nunito-Light.ttf);
+}
+@font-face {
+   font-family: nunitoExtraLight;
+   src: url(resources/nunito/Nunito-ExtraLight.ttf);
+}
+@font-face {
+   font-family: nunitoBold;
+   src: url(resources/nunito/Nunito-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito';
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+
+.nav-container {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 90%; /* Space of the content, right-left */
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.tool-name {
+  color: #DACA91;
+}
+
+/* Tool */
+
+.tool-container{
+  height: calc(100% - 80px);
+  display: flex;
+  width: 100%;
+  position:fixed;
+}
+
+.column {
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tool - Parameters */
+
+#parameters-container {
+  background: #FFFFFF;
+  border-top: 2px solid #FAF9F8;
+  text-align: center;
+  overflow:auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: white; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2f1ed;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B7B2;
+  cursor: pointer;
+}
+
+.box {
+  border-radius: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+  height:auto;
+  padding:5%;
+  padding-top: 3%;
+  margin: 3% auto;
+  margin-bottom: 3%;
+  width: 85%;
+  display: inline-block;
+}
+
+.group {
+    display: flex;
+}
+
+.group * {
+  align-items: center;
+  width: 100%;
+  margin-right: 10px
+}
+
+.group input[type="range"]:nth-last-of-type(1),p:nth-last-of-type(1) { /* Remove space on the right side of the last element of the menu */
+  margin: 0;
+}
+
+
+/* Tool - Canvas */
+#canvas-container {
+  background: #FAF9F8;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  height:100%;
+}
+
+#canvas-container ul {
+  display: inline-block;
+  list-style-type: none;
+  align-items: center;
+  padding-inline-start: 0px;
+  box-sizing: border-box;
+  margin: 10px auto;
+  width: 100%;
+  height:100%;
+}
+
+.canvas-list {
+  height: auto;
+}
+
+canvas {
+  background: #FFFFFF;
+  border-radius: 50px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.02);
+  height: 100%;
+}
+
+#canvas-element{
+  height: 90%;
+}
+
+.tool-container button {
+  font-family: 'Nunito';
+  background: #F4EFDC;
+  font-size: 14px;
+  color: #DBBF4D;
+  padding: 12px 40px;
+  margin: 8px 0;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.tool-container button:hover {
+  background-color: #DACA91;
+  color: white;
+}
+
+.tool-container button:focus {
+    outline:0;
+}
+
+
+/* Parameters: Buttons, checkboxes, sliders.. */
+
+/* Sliders*/
+input[type="range"] {
+    width: 100%;
+    height: 3px;
+    -webkit-appearance:none;
+    background-color: #f2f1ed;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    background: #f2f1ed;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #DACA91;
+}
+
+/* Box Title*/
+#parameters-container h1 {
+  font-family: 'Nunito';
+  font-weight: normal;
+  font-size: 14px;
+  color: #B8B7B2;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Labels */
+#parameters-container p {
+  font-family: 'Nunito';
+  font-weight: normal;
+  font-size: 14px;
+  color: #B8B7B2;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.group p {
+   margin-bottom: 5px;
+}
+
+/* Text Box and drop down*/
+input[type="text"], select, input[type="color"]{
+    height: 22px;
+    border-radius: 10px;
+    border: 1px solid #B8B7B2;
+    background: #FFFFFF;
+    font-family: 'nunitoLight';
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 5px;
+    color: #B8B7B2;
+    width: 100%;
+    margin-bottom: 5px;
+    transition-duration: 0.4s;
+}
+
+input[type="text"]:focus, select:focus, input[type="color"] {
+    outline:0;
+}
+
+select {
+    padding-right: 5px;
+}
+
+/* Button */
+#parameters-container button {
+    height: 22px;
+    padding: 0px;
+    margin: 0px 0;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input[type="color"]{
+    width: 100%;
+    padding-left: 2px;
+}
